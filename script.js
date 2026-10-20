@@ -1,58 +1,6 @@
 var clientes = [];
 var alunos = [];
-
-document.getElementById("form-cliente").onsubmit = function(e) {
-    e.preventDefault();
-
-    clientes.push(document.getElementById("nome-cliente").value);
-
-    document.getElementById("lista-clientes").innerHTML +=
-        "<p>" + clientes[Cliente.length - 1] + "</p>";
-
-    document.getElementById("q-clientes").innerText = clientes.length;
-
-    this.reset();
-};
-
-document.getElementById("form-estudante").onsubmit = function(e) {
-    e.preventDefault();
-
-    var nome = document.getElementById("nome-estudante").value;
-
-    alunos.push(nome);
-
-    document.getElementById("lista-estudantes").innerHTML +=
-        "<p>" + nome + "</p>";
-
-    document.getElementById("q-estudantes").innerText = alunos.length;
-
-    this.reset();
-};
-
-document.getElementById("form-avaliacao").onsubmit = function(e) {
-    e.preventDefault();
-
-    var n1 = Number(document.getElementById("n1").value);
-    var n2 = Number(document.getElementById("n2").value);
-    var media = (n1 + n2) / 2;
-
-    document.getElementById("lista-avaliacoes").innerHTML +=
-        "<p>Média: " + media.toFixed(1) + "</p>";
-
-    if (media >= 6) {
-        document.getElementById("q-aprovados").innerText =
-            Number(document.getElementById("q-aprovados").innerText) + 1;
-    }
-
-    this.reset();
-};
-
-document.getElementById("exportar").onclick = function() {
-    alert("Relatório acadêmico");
-};
-
 var botoes = document.querySelectorAll(".tab");
-
 for (var i = 0; i < botoes.length; i++) {
     botoes[i].onclick = function() {
         var abas = document.querySelectorAll(".aba");
@@ -65,7 +13,69 @@ for (var i = 0; i < botoes.length; i++) {
             botoes[j].classList.remove("active");
         }
 
-        document.getElementById("aba-" + this.dataset.aba).hidden = false;
+        var abaAlvo = document.getElementById("aba-" + this.dataset.aba);
+        if (abaAlvo) {
+            abaAlvo.hidden = false;
+        }
         this.classList.add("active");
+    };
+}
+
+var formCliente = document.getElementById("form-cliente");
+if (formCliente) {
+    formCliente.onsubmit = function(e) {
+        e.preventDefault();
+
+        var nome = document.getElementById("nome-cliente").value;
+        var carroEl = document.getElementById("carro-cliente");
+        var carro = carroEl ? carroEl.value : "";
+
+        clientes.push({ nome: nome, carro: carro });
+
+        var listaTurmas = document.getElementById("lista-turmas");
+        if (listaTurmas) {
+            listaTurmas.innerHTML += 
+                "<div class='item'>" +
+                    "<h3>" + nome + "</h3>" +
+                    "<p><strong>Carro Desejado:</strong> " + (carro || "Não informado") + "</p>" +
+                "</div>";
+        }
+
+        var contadorClientes = document.getElementById("q-clientes");
+        if (contadorClientes) {
+            contadorClientes.innerText = clientes.length;
+        }
+
+        this.reset();
+    };
+}
+
+var formEstudante = document.getElementById("form-estudante");
+if (formEstudante) {
+    formEstudante.onsubmit = function(e) {
+        e.preventDefault();
+
+        var nome = document.getElementById("nome-estudante").value;
+        var matricula = document.getElementById("matricula").value;
+
+        alunos.push({ nome: nome, matricula: matricula });
+
+        var listaEstudantes = document.getElementById("lista-estudantes");
+        if (listaEstudantes) {
+            listaEstudantes.innerHTML += 
+                "<div class='item'>" +
+                    "<h3>" + nome + "</h3>" +
+                    "<p><strong>Cadastro Registrado:</strong> " + matricula + "</p>" +
+                "</div>";
+        }
+
+        this.reset();
+    };
+}
+
+var btnExportar = document.getElementById("exportar");
+if (btnExportar) {
+    btnExportar.onclick = function() {
+        alert("Relatório de Clientes BMW HAUS MOTORS gerado com sucesso!");
     };
 }

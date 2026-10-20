@@ -4,27 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Projeto educacional Front-end: Gestão Acadêmica. Interface em português brasileiro.">
-    <title>BMW HAUS MOTORS </title>
+    <title>BMW HAUS MOTORS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="topbar">
         <div class="topbar-inner">
-            <a class="brand" href="../index.html">Laboratório Front-end</a>
-            <a class="back" href="../index.html"></a>
+            <a class="brand" href="../index.html"></a>
         </div>
     </header>
 
     <div class="app">
-
         <section class="hero">
             <div>
                 <div class="eyebrow"></div>
                 <h1>BMW HAUS MOTORS</h1>
-                <p>Venha e faça parte do grupo BMW Aju-SE</p>
+                <p>Venha e faça parte do grupo BMW </p>
             </div>
-
-            <div class="hero-emoji" aria-hidden="true">🚗</div>
+            <div class="hero-emoji" aria-hidden="true">
+                <img src="IMG/M5.jpg" alt="Carro BMW" class="hero-img">
+            </div>
         </section>
 
         <main class="main">
@@ -34,18 +33,18 @@
             <div class="metrics">
 
                 <div class="metric">
-                    <span>Cliente</span>
-                    <strong id="q-turmas">0</strong>
+                    <span>Localização:</span>
+                    <strong>ARACAJU SERGIPE</strong>
                 </div>
 
                 <div class="metric">
                     <span>Clientes cadastrados</span>
-                    <strong id="q-estudantes">0</strong>
+                    <strong id="q-clientes">0</strong>
                 </div>
 
                 <div class="metric">
-                    <span>Compras aprovadas</span>
-                    <strong id="q-aprovados">0</strong>
+                    <span>Numero de aprovados em 34 anos</span>
+                    <strong id="q-aprovados">10000+ Clientes</strong>
                 </div>
 
             </div>
@@ -54,24 +53,24 @@
 
                 <nav class="tabbar" aria-label="Seções do sistema">
                     <button class="tab active" type="button" data-aba="turmas">Cliente</button>
-                    <button class="tab" type="button" data-aba="estudantes">Cliente cadastrados</button>
+                    <button class="tab" type="button" data-aba="estudantes">Clientes cadastrados</button>
+                    <button class="tab" type="button" data-aba="videos">Galeria de Vídeos</button>
                     <button class="tab" type="button" data-aba="relatorios">Relatórios</button>
                 </nav>
-
                 <section id="aba-turmas" class="aba">
-
                     <div class="grid">
-
                         <div class="span-4">
                             <h2>Cadastrar cliente</h2>
-
                             <form id="form-cliente" class="stack">
 
                                 <div class="field">
                                     <label for="nome-cliente">Nome do cliente</label>
                                     <input id="nome-cliente" maxlength="60" required placeholder="Ex.: João Adibe">
                                 </div>
-
+                                <div class="field">
+                                    <label for="carro-cliente">Carro Desejado</label>
+                                    <input id="carro-cliente" maxlength="60" required placeholder="Ex.: BMW M5 COMPETITION">
+                                </div>
                                 <div class="field">
                                     <label for="turno">Turno de cadastro</label>
                                     <select id="turno">
@@ -92,16 +91,13 @@
                         </div>
 
                     </div>
-
                 </section>
-
                 <section id="aba-estudantes" class="aba" hidden>
-
                     <div class="grid">
 
                         <div class="span-4">
                             <h2>Cadastrar cliente</h2>
-                            <p class="intro">Associe cada estudante à turma correta.</p>
+                            <p class="intro">Associe cada cliente ao carro correto.</p>
 
                             <form id="form-estudante" class="stack">
 
@@ -111,16 +107,19 @@
                                 </div>
 
                                 <div class="field">
-                                    <label for="matricula">Matrícula</label>
+                                    <label for="matricula">Cadastro Registrado</label>
                                     <input id="matricula" maxlength="20" required>
                                 </div>
 
                                 <div class="field">
-                                    <label for="turma-estudante">Turma</label>
-                                    <select id="turma-estudante" required></select>
+                                    <label for="turno-estudante">Turno de cadastro</label>
+                                    <select id="turno-estudante">
+                                        <option>Manhã</option>
+                                        <option>Tarde</option>
+                                    </select>
                                 </div>
 
-                                <button class="btn btn-primary" type="submit">Cadastrar estudante</button>
+                                <button class="btn btn-primary" type="submit">Cadastrar cliente</button>
 
                             </form>
                         </div>
@@ -131,80 +130,39 @@
                         </div>
 
                     </div>
-
                 </section>
 
-                <section id="aba-avaliacoes" class="aba" hidden>
+                <section id="aba-videos" class="aba" hidden>
+                    <h2>BMW M5 Competition 2022</h2>
+                    <p class="intro">Assista ao Santo graal da BMW.</p>
 
-                    <div class="grid">
-
-                        <div class="span-5">
-                            <h2>Lançar avaliação</h2>
-                            <p class="intro">Média mínima: 6,0. Frequência mínima: 75%.</p>
-
-                            <form id="form-avaliacao" class="stack">
-
-                                <div class="field">
-                                    <label for="aluno-avaliacao">cliente</label>
-                                    <select id="aluno-avaliacao" required></select>
-                                </div>
-
-                                <div class="field">
-                                    <label for="disciplina">Unidade curricular</label>
-                                    <input id="disciplina" maxlength="80" required placeholder="Ex.: Projeto Front-end">
-                                </div>
-
-                                <div class="form-grid">
-
-                                    <div class="field">
-                                        <label for="n1">Nota 1</label>
-                                        <input id="n1" type="number" min="0" max="10" step="0.1" required>
-                                    </div>
-
-                                    <div class="field">
-                                        <label for="n2">Nota 2</label>
-                                        <input id="n2" type="number" min="0" max="10" step="0.1" required>
-                                    </div>
-
-                                </div>
-
-                                <div class="field">
-                                    <label for="freq">Frequência (%)</label>
-                                    <input id="freq" type="number" min="0" max="100" step="1" value="100" required>
-                                </div>
-
-                                <button class="btn btn-primary" type="submit">Salvar avaliação</button>
-
-                            </form>
+                    <div class="video-grid">
+                        <div class="video-card">
+                            <h3> BMW M5 Competition</h3>
+                            <video class="video-player" controls preload="metadata">
+                                <source src="VIDEO/videoplayback.mp4" type="video/mp4">
+                            </video>
                         </div>
 
-                        <div class="span-7">
-                            <h2>Avaliações registradas</h2>
-                            <p class="intro">Um registro por estudante e unidade curricular. Ao enviar novamente, o registro existente é atualizado.</p>
-                            <div id="lista-avaliacoes" class="item-list"></div>
+                        </div>
+                        </div>
                         </div>
 
                     </div>
-
                 </section>
 
                 <section id="aba-relatorios" class="aba" hidden>
 
                     <div class="row between">
-
-                        <div>
-                            <h2>Relatório de desempenho</h2>
-                            <p class="intro">Consulte as notas, a frequência e a situação acadêmica.</p>
-                        </div>
-
-                        <button id="exportar" class="btn btn-secondary btn-small" type="button">Baixar relatório CSV</button>
-
+                        <div></div>
+                        <button id="exportar" class="btn btn-secondary btn-small" type="button">Baixar relatório do Cliente</button>
                     </div>
 
                     <div class="field" style="max-width: 300px; margin-bottom: 15px;">
-                        <label for="filtro-turma">Filtrar por turma</label>
-                        <select id="filtro-turma">
-                            <option value="">Todas as turmas</option>
+                        <label for="filtro-cliente">Filtrar por turno</label>
+                        <select id="filtro-cliente">
+                            <option value="">Manhã</option>
+                            <option value="">Tarde</option>
                         </select>
                     </div>
 
@@ -215,11 +173,6 @@
             </div>
 
         </main>
-
-        <p class="footer">
-            Demonstração didática • Os dados, quando armazenados, ficam apenas neste navegador • Interface em português brasileiro
-        </p>
-
     </div>
   <script src="script.js" defer></script>
 </body>
