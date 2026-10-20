@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Projeto educacional Front-end: Gestão Acadêmica. Interface em português brasileiro.">
+    <title>BMW HAUS MOTORS</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a class="brand" href="../index.html"></a>
+        </div>
+    </header>
+
+    <div class="app">
+        <section class="hero">
+            <div>
+                <div class="eyebrow"></div>
+                <h1>BMW HAUS MOTORS</h1>
+                <p>Venha e faça parte do grupo BMW </p>
+            </div>
+            <div class="hero-emoji" aria-hidden="true">
+                <img src="../img/M5 1.jpg" alt="Carro BMW" class="hero-img">
+            </div>
+        </section>
+
+        <main class="main">
+
+            <div id="aviso" class="feedback" role="status" aria-live="polite" hidden></div>
+
+            <div class="metrics">
+
+                <div class="metric">
+                    <span>Localização:</span>
+                    <strong>ARACAJU SERGIPE</strong>
+                </div>
+
+                <div class="metric">
+                    <span>Clientes cadastrados</span>
+                    <strong id="q-clientes">0</strong>
+                </div>
+
+                <div class="metric">
+                    <span>Numero de aprovados em 34 anos</span>
+                    <strong id="q-aprovados">10000+ Clientes</strong>
+                </div>
+
+            </div>
+
+            <div class="panel">
+
+                <nav class="tabbar" aria-label="Seções do sistema">
+                    <button class="tab active" type="button" data-aba="turmas">Cliente</button>
+                    <button class="tab" type="button" data-aba="estudantes">Clientes cadastrados</button>
+                    <button class="tab" type="button" data-aba="videos">Galeria de Vídeos</button>
+                    <button class="tab" type="button" data-aba="relatorios">Relatórios</button>
+                </nav>
+                <section id="aba-turmas" class="aba">
+                    <div class="grid">
+                        <div class="span-4">
+                            <h2>Cadastrar cliente</h2>
+                            <form id="form-cliente" class="stack">
+
+                                <div class="field">
+                                    <label for="nome-cliente">Nome do cliente</label>
+                                    <input id="nome-cliente" maxlength="60" required placeholder="Ex.: João Adibe">
+                                </div>
+                                <div class="field">
+                                    <label for="carro-cliente">Carro Desejado</label>
+                                    <input id="carro-cliente" maxlength="60" required
+                                        placeholder="Ex.: BMW M5 COMPETITION">
+                                </div>
+                                <div class="field">
+                                    <label for="turno">Turno de cadastro</label>
+                                    <select id="turno">
+                                        <option>Manhã</option>
+                                        <option>Tarde</option>
+                                    </select>
+                                </div>
+
+                                <button class="btn btn-primary" type="submit">Cadastrar cliente</button>
+
+                            </form>
+                        </div>
+
+                        <div class="span-8">
+                            <h2>Clientes cadastrados</h2>
+                            <p class="intro">Edite ou exclua clientes.</p>
+                            <div id="lista-turmas" class="item-list"></div>
+                        </div>
+
+                    </div>
+                </section>
+                <section id="aba-estudantes" class="aba" hidden>
+                    <div class="grid">
+
+                        <div class="span-4">
+                            <h2>Cadastrar cliente</h2>
+                            <p class="intro">Associe cada cliente ao carro correto.</p>
+
+                            <form id="form-estudante" class="stack">
+
+                                <div class="field">
+                                    <label for="nome-estudante">Nome completo</label>
+                                    <input id="nome-estudante" maxlength="80" required>
+                                </div>
+
+                                <div class="field">
+                                    <label for="matricula">Cadastro Registrado</label>
+                                    <input id="matricula" maxlength="20" required>
+                                </div>
+
+                                <div class="field">
+                                    <label for="turno-estudante">Turno de cadastro</label>
+                                    <select id="turno-estudante">
+                                        <option>Manhã</option>
+                                        <option>Tarde</option>
+                                    </select>
+                                </div>
+
+                                <button class="btn btn-primary" type="submit">Cadastrar cliente</button>
+
+                            </form>
+                        </div>
+
+                        <div class="span-8">
+                            <h2>Clientes cadastrados</h2>
+                            <div id="lista-estudantes" class="item-list"></div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section id="aba-videos" class="aba" hidden>
+                    <h2>BMW M5 Competition 2022</h2>
+                    <p class="intro">Assista ao Santo graal da BMW.</p>
+
+                    <div class="video-grid">
+                        <div class="video-card">
+                            <h3> BMW M5 Competition</h3>
+                            <video class="video-player" controls preload="metadata">
+                                <source src="../video/videoplayback (2).mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                    </div>
+            </div>
+    </div>
+
+    </div>
+    </section>
+
+    <section id="aba-relatorios" class="aba" hidden>
+
+        <div class="row between">
+            <div></div>
+            <button id="exportar" class="btn btn-secondary btn-small" type="button">Baixar relatório do Cliente</button>
+        </div>
+
+        <div class="field" style="max-width: 300px; margin-bottom: 15px;">
+            <label for="filtro-cliente">Filtrar por turno</label>
+            <select id="filtro-cliente">
+                <option value="">Manhã</option>
+                <option value="">Tarde</option>
+            </select>
+        </div>
+
+        <div id="tabela-relatorio" class="table-wrap"></div>
+
+    </section>
+
+    </div>
+
+    </main>
+    </div>
+
+</body>
+
+</html>
