@@ -8,7 +8,7 @@ body {
 .topbar {
     background-color: #302c28;
     padding: 18px;
-    border-bottom: 5px solid #d87941;
+    border-bottom: 5px solid #00aeff;
 }
 
 .topbar-inner {
@@ -39,7 +39,7 @@ body {
 }
 
 .hero {
-    background-color: #d87941;
+    background-color: #00abfa;
     color: white;
     padding: 30px;
     display: flex;
@@ -83,7 +83,7 @@ body {
     padding: 18px;
     flex: 1;
     min-width: 150px;
-    border-bottom: 4px solid #d87941;
+    border-bottom: 4px solid #1c0099;
 }
 
 .metric span {
@@ -128,8 +128,8 @@ body {
 
 .tab.active {
     background-color: #fffdf8;
-    color: #bd5d29;
-    border-top: 4px solid #d87941;
+    color: #0077ff;
+    border-top: 4px solid #05b0ff;
     font-weight: bold;
 }
 
@@ -183,7 +183,7 @@ body {
 
 .field input:focus,
 .field select:focus {
-    outline: 2px solid #d87941;
+    outline: 2px solid #060496;
 }
 
 .form-grid {
@@ -226,7 +226,7 @@ body {
     background-color: #f5f0e7;
     padding: 15px;
     margin-bottom: 12px;
-    border-left: 4px solid #d87941;
+    border-left: 4px solid #08007a;
 }
 
 .item h3 {
@@ -264,8 +264,8 @@ body {
 
 .feedback.error {
     background-color: #f5dcd5;
-    color: #8c3025;
-    border-left-color: #b64032;
+    color: #0b0194;
+    border-left-color: #0b0194;
 }
 
 .feedback[hidden],

@@ -1,15 +1,15 @@
-var turmas = [];
+var clientes = [];
 var alunos = [];
 
-document.getElementById("form-turma").onsubmit = function(e) {
+document.getElementById("form-cliente").onsubmit = function(e) {
     e.preventDefault();
 
-    turmas.push(document.getElementById("nome-turma").value);
+    clientes.push(document.getElementById("nome-cliente").value);
 
-    document.getElementById("lista-turmas").innerHTML +=
-        "<p>" + turmas[turmas.length - 1] + "</p>";
+    document.getElementById("lista-clientes").innerHTML +=
+        "<p>" + clientes[Cliente.length - 1] + "</p>";
 
-    document.getElementById("q-turmas").innerText = turmas.length;
+    document.getElementById("q-clientes").innerText = clientes.length;
 
     this.reset();
 };

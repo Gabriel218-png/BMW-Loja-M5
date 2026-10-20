@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Projeto educacional Front-end: Gestão Acadêmica. Interface em português brasileiro.">
-    <title>Gestão Acadêmica | Projetos Front-end</title>
+    <title>BMW HAUS MOTORS </title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="topbar">
         <div class="topbar-inner">
             <a class="brand" href="../index.html">Laboratório Front-end</a>
-            <a class="back" href="../index.html"> Ver os nove projetos</a>
+            <a class="back" href="../index.html"></a>
         </div>
     </header>
 
@@ -19,12 +19,12 @@
 
         <section class="hero">
             <div>
-                <div class="eyebrow">Projeto simples • HTML + CSS + JavaScript</div>
-                <h1>Gestão Acadêmica</h1>
-                <p>Organize turmas, estudantes, notas e frequência.</p>
+                <div class="eyebrow"></div>
+                <h1>BMW HAUS MOTORS</h1>
+                <p>Venha e faça parte do grupo BMW Aju-SE</p>
             </div>
 
-            <div class="hero-emoji" aria-hidden="true">🎓</div>
+            <div class="hero-emoji" aria-hidden="true">🚗</div>
         </section>
 
         <main class="main">
@@ -34,17 +34,17 @@
             <div class="metrics">
 
                 <div class="metric">
-                    <span>Turmas</span>
+                    <span>Cliente</span>
                     <strong id="q-turmas">0</strong>
                 </div>
 
                 <div class="metric">
-                    <span>Estudantes</span>
+                    <span>Clientes cadastrados</span>
                     <strong id="q-estudantes">0</strong>
                 </div>
 
                 <div class="metric">
-                    <span>Avaliações aprovadas</span>
+                    <span>Compras aprovadas</span>
                     <strong id="q-aprovados">0</strong>
                 </div>
 
@@ -53,9 +53,8 @@
             <div class="panel">
 
                 <nav class="tabbar" aria-label="Seções do sistema">
-                    <button class="tab active" type="button" data-aba="turmas">Turmas</button>
-                    <button class="tab" type="button" data-aba="estudantes">Estudantes</button>
-                    <button class="tab" type="button" data-aba="avaliacoes">Notas e frequência</button>
+                    <button class="tab active" type="button" data-aba="turmas">Cliente</button>
+                    <button class="tab" type="button" data-aba="estudantes">Cliente cadastrados</button>
                     <button class="tab" type="button" data-aba="relatorios">Relatórios</button>
                 </nav>
 
@@ -64,33 +63,31 @@
                     <div class="grid">
 
                         <div class="span-4">
-                            <h2>Cadastrar turma</h2>
-                            <p class="intro">Comece criando uma turma.</p>
+                            <h2>Cadastrar cliente</h2>
 
-                            <form id="form-turma" class="stack">
+                            <form id="form-cliente" class="stack">
 
                                 <div class="field">
-                                    <label for="nome-turma">Nome da turma</label>
-                                    <input id="nome-turma" maxlength="60" required placeholder="Ex.: Informática 2026">
+                                    <label for="nome-cliente">Nome do cliente</label>
+                                    <input id="nome-cliente" maxlength="60" required placeholder="Ex.: João Adibe">
                                 </div>
 
                                 <div class="field">
-                                    <label for="turno">Turno</label>
+                                    <label for="turno">Turno de cadastro</label>
                                     <select id="turno">
                                         <option>Manhã</option>
                                         <option>Tarde</option>
-                                        <option>Noite</option>
                                     </select>
                                 </div>
 
-                                <button class="btn btn-primary" type="submit">Cadastrar turma</button>
+                                <button class="btn btn-primary" type="submit">Cadastrar cliente</button>
 
                             </form>
                         </div>
 
                         <div class="span-8">
-                            <h2>Turmas cadastradas</h2>
-                            <p class="intro">Edite ou exclua turmas sem estudantes vinculados.</p>
+                            <h2>Clientes cadastrados</h2>
+                            <p class="intro">Edite ou exclua clientes.</p>
                             <div id="lista-turmas" class="item-list"></div>
                         </div>
 
@@ -103,7 +100,7 @@
                     <div class="grid">
 
                         <div class="span-4">
-                            <h2>Cadastrar estudante</h2>
+                            <h2>Cadastrar cliente</h2>
                             <p class="intro">Associe cada estudante à turma correta.</p>
 
                             <form id="form-estudante" class="stack">
@@ -129,7 +126,7 @@
                         </div>
 
                         <div class="span-8">
-                            <h2>Estudantes cadastrados</h2>
+                            <h2>Clientes cadastrados</h2>
                             <div id="lista-estudantes" class="item-list"></div>
                         </div>
 
@@ -148,7 +145,7 @@
                             <form id="form-avaliacao" class="stack">
 
                                 <div class="field">
-                                    <label for="aluno-avaliacao">Estudante</label>
+                                    <label for="aluno-avaliacao">cliente</label>
                                     <select id="aluno-avaliacao" required></select>
                                 </div>
 
